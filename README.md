@@ -1,0 +1,1 @@
+# padronizacao_grupo_propagacao
