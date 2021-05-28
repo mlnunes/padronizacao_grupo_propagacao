@@ -1,0 +1,12 @@
+\frametitle{Importar \textit{.json} em  Python}
+	\begin{itemize}
+		\item Em Python um arquivo \textit{.json} pode ser convertido para um objeto do tipo \textit{dictionary}.
+		\item A estrutura dos arquivos \textit{.json} é compreendida utilizando a biblioteca ''json'':
+	\end{itemize}
+\begin{lstlisting}[language=python]
+	import json
+	f = 'file_name.json'
+	with open(f) as json_conf :
+		var_x = json.load(f)
+\end{lstlisting}
+

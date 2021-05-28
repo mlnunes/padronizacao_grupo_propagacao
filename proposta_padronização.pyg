@@ -1,0 +1,70 @@
+
+\begin{frame}
+	\frametitle{Entrada de Dados}
+	São considerados dados as informações descritivas de:
+	\begin{itemize}
+		\item Elevação do Terreno
+		\item Altura das Edificações
+		\item Tipo de Cobertura do Terreno
+		\item Diagramas de irradiação das antena
+		\item Comportamento do Índice de Refratividade da Atmosfera
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Entrada de Dados}
+	Propõem-se a utilização de \textit{m-files}.\\
+	Cada informação em um arquivo distinto contendo:
+	\begin{itemize}
+		\item Uma matriz $1xN$ contendo a posição relativa da informação
+		\item Uma matriz $1xN$ contendo a informação relativa ao ponto de coleta
+		\item Uma variável de dados informando o passo utilizado
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Dados ao longo do eixo X}
+	Para as informações ao longo do eixo X, p.ex. elevação, clutter, altura de edificações, a referência é a estação principal (p.ex eNB, transmissora de radiodifusão).\\
+	O \textit{m-file} deve conter três variáveis:
+	\begin{itemize}
+		\item uma matriz $1xN$ contendo as distâncias relativas das amostras tomando a estação principal como referência denominada \emph{distancia}
+		\item uma matriz $1xN$ contendo os valores do parâmetro amostrado nos pontos cujas distâncias estão indicadas pelo mesmo índice na matriz \emph{distancia}. O nome desta matriz segue o nome do parâmetro observado em formato \textit{ASCII} (caixa baixa, sem acentos).
+		\item O passo utilizado para amostragem.
+	\end{itemize}
+	Para as informações de classificação de cobertura do terreno, sugere-se adoção dos códigos do \textit{Land Cover Classification System} (LCCS).
+\end{frame}
+
+\begin{frame}
+	\frametitle{Dados ao longo do eixo X - exemplo}
+		\begin{figure}
+		\includegraphics[scale=0.3]{exemplo_elevacao_grafico}
+		\includegraphics[scale=0.3]{exemplo_elevacao}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Dados ao longo do eixo Y}
+	Para as informações ao longo do eixo Y, p.ex. índice de refratividade da atmosfera, a referência é nível do mar.\\
+	O \textit{m-file} deve conter três variáveis:
+	\begin{itemize}
+		\item uma matriz $1xN$ contendo a faixa de altitude de coleta das amostras, denominada \emph{altitude}
+		\item uma matriz $1xN$ contendo os valores do parâmetro amostrado nos pontos cujas altitudes estão indicadas pelo mesmo índice na matriz \emph{altitude}. O nome desta matriz segue o nome do parâmetro observado em formato \textit{ASCII} (caixa baixa, sem acentos).
+		\item O passo utilizado para amostragem.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Diagramas de irradiação de antenas}
+	O \textit{m-file} deve conter três variáveis:
+	\begin{itemize}
+		\item uma matriz $1xN$ contendo o azimute denominado \textit{azimute}
+		\item uma matriz $1xN$ contendo os valores do ganho no plano H amostrados nos pontos cujos azimutes estão indicadas pelo mesmo índice na matriz \emph{azimute}, denominada \textit{plano\_h}.
+		\item uma matriz $1xN$ contendo os valores do ganho no plano V amostrados nos pontos cujos azimutes estão indicadas pelo mesmo índice na matriz \emph{azimute}, denominada \textit{plano\_v}.
+		\item O passo utilizado para amostragem.
+	\end{itemize}
+
+\end{frame}
+
+\end{document}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]

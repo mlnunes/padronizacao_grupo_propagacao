@@ -1,2 +1,2 @@
-# padronizacao_grupo_propagacao
-# padronizacao_grupo_propagacao
+# padronizacao in/out solvers
+Apresentação da  proposta de padronizacao_para os solver desenvolvidos pelo grupo_propagacao

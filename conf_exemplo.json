@@ -1,0 +1,40 @@
+{
+    "general" : {
+        "lenght" :15000,
+        "height" : 300,
+        "center_frequency" : 500.0E+6,
+        "bandwidth" : 50E3,
+        "elevation_profile" : "location_A_elev.mat",
+        "buildings_heights" : "location_A_bh.mat",
+        "atmospheric_reflectivity" : "location_A_ra.mat",
+        "clutter" : "location_A_clutter.mat"
+        },
+    "principal" : {
+        "x" : 10,
+        "y" : 60,
+        "tx_power" : 1E-3,
+        "antenna_pattern" : "factoryX_model50b.mat",
+        "azimuth": 10,
+        "tilt" : 4
+        },
+    "probe" : {
+        "horizontal" : {
+            "y" : 3,
+            "threshold_dbm" : -115,
+            "x_start_interval" : 1000,
+            "x_end_interval" : 3000
+            },
+        "vertical" : {
+            "x" : 3000,
+            "threshold_dbm" : -115,
+            "y_start_interval" : 50,
+            "y_end_interval" : 300
+            },
+    },
+    "optional" : {
+        "clutter_epsr" : "location_A_epsr.mat",
+        "clutter_sigma" : "location_A_sigma.mat",
+        "window_size" : 1000
+        }
+}
+    
